@@ -1,0 +1,251 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  24/Jan/2020  21:14:16
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Exe\NewBasilProject.out
+#    Map file     =  
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\List\NewBasilProject.map
+#    Command line =  
+#        -f C:\Users\testHome\AppData\Local\Temp\EW193F.tmp
+#        (C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\LCD.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\main.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_adc.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_gpio.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_i2c.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_rcc.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_tim.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\stm32f10x_usart.o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj\STM32vldiscovery.o
+#        --no_out_extension -o
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Exe\NewBasilProject.out
+#        --map
+#        C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\List\NewBasilProject.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2\arm\config\linker\ST\stm32f100x6.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'7fff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 1K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'0fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0x40
+  .intvec            ro code   0x800'0000   0x40  vector_table_M.o [3]
+                             - 0x800'0040   0x40
+
+"P1":                                      0x811
+  .text              ro code   0x800'0040  0x36c  main.o [1]
+  .text              ro code   0x800'03ac  0x10a  stm32f10x_usart.o [1]
+  .text              ro code   0x800'04b6    0x2  vector_table_M.o [3]
+  .text              ro code   0x800'04b8  0x108  stm32f10x_rcc.o [1]
+  .text              ro code   0x800'05c0   0xc0  stm32f10x_gpio.o [1]
+  .rodata            const     0x800'0680   0x3c  main.o [1]
+  .text              ro code   0x800'06bc   0x38  packbits_init_single.o [3]
+  .rodata            const     0x800'06f4   0x30  main.o [1]
+  .rodata            const     0x800'0724   0x28  main.o [1]
+  .text              ro code   0x800'074c   0x28  data_init.o [3]
+  .iar.init_table    const     0x800'0774   0x10  - Linker created -
+  .text              ro code   0x800'0784   0x1e  cmain.o [3]
+  .text              ro code   0x800'07a2    0x4  low_level_init.o [2]
+  .text              ro code   0x800'07a6    0x4  exit.o [2]
+  .text              ro code   0x800'07ac    0xa  cexit.o [3]
+  .text              ro code   0x800'07b8   0x14  exit.o [4]
+  .rodata            const     0x800'07cc   0x14  main.o [1]
+  .rodata            const     0x800'07e0   0x10  main.o [1]
+  .rodata            const     0x800'07f0   0x10  main.o [1]
+  .rodata            const     0x800'0800   0x10  main.o [1]
+  .rodata            const     0x800'0810   0x10  main.o [1]
+  .text              ro code   0x800'0820    0xc  cstartup_M.o [3]
+  .rodata            const     0x800'082c    0x8  main.o [1]
+  .rodata            const     0x800'0834    0x8  main.o [1]
+  .rodata            const     0x800'083c    0x0  packbits_init_single.o [3]
+  Initializer bytes  const     0x800'083c   0x15  <for P2-1>
+                             - 0x800'0851  0x811
+
+"P2", part 1 of 2:                          0x3d
+  P2-1                        0x2000'0000   0x3d  <Init block>
+    .data            inited   0x2000'0000   0x10  stm32f10x_rcc.o [1]
+    .data            inited   0x2000'0010    0x4  stm32f10x_rcc.o [1]
+    .bss             inited   0x2000'0014   0x20  main.o [1]
+    .bss             inited   0x2000'0034    0x1  main.o [1]
+    .bss             inited   0x2000'0035    0x1  main.o [1]
+    .bss             inited   0x2000'0036    0x1  main.o [1]
+    .bss             inited   0x2000'0037    0x1  main.o [1]
+    .bss             inited   0x2000'0038    0x1  main.o [1]
+    .bss             inited   0x2000'0039    0x1  main.o [1]
+    .bss             inited   0x2000'003a    0x1  main.o [1]
+    .bss             inited   0x2000'003b    0x1  main.o [1]
+    .bss             inited   0x2000'003c    0x1  main.o [1]
+                            - 0x2000'003d   0x3d
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0040  0x400  <Block>
+    CSTACK           uninit   0x2000'0040  0x400  <Block tail>
+                            - 0x2000'0440  0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'0851   0x800'7fff  0x77af
+  0x2000'003d  0x2000'003f     0x3
+  0x2000'0440  0x2000'0fff   0xbc0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x15 (34% of destination):
+           0x800'083c  0x15
+    1 destination range, total size 0x3d:
+          0x2000'0000  0x3d
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj: [1]
+    main.o                      876      263       41
+    stm32f10x_gpio.o            192
+    stm32f10x_rcc.o             264        6       20
+    stm32f10x_usart.o           266
+    -------------------------------------------------
+    Total:                    1 598      269       61
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       56
+    vector_table_M.o             66
+    -------------------------------------------------
+    Total:                      214
+
+shb_l.a: [4]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          4
+    Linker created                        16    1 024
+-----------------------------------------------------
+    Grand Total:              1 844      285    1 085
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0774          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0784          --   Gb  - Linker created -
+?main                    0x800'0785         Code  Gb  cmain.o [3]
+ADCPrescTable           0x2000'0010    0x4  Data  Lc  stm32f10x_rcc.o [1]
+APBAHBPrescTable        0x2000'0000   0x10  Data  Lc  stm32f10x_rcc.o [1]
+CSTACK$$Base            0x2000'0040          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0440          --   Gb  - Linker created -
+Clk_Init                 0x800'02c3   0x18  Code  Gb  main.o [1]
+Delay                    0x800'0399   0x14  Code  Gb  main.o [1]
+ESP8266_check_Response   0x800'0207   0x2e  Code  Gb  main.o [1]
+ESP8266_receive_string   0x800'025d   0x2c  Code  Gb  main.o [1]
+ESP8266_send_string      0x800'0235   0x28  Code  Gb  main.o [1]
+GPIOInit                 0x800'02db   0x5a  Code  Gb  main.o [1]
+GPIO_Init                0x800'05c1   0xc0  Code  Gb  stm32f10x_gpio.o [1]
+RCC_APB1PeriphClockCmd   0x800'0585   0x1c  Code  Gb  stm32f10x_rcc.o [1]
+RCC_APB2PeriphClockCmd   0x800'0569   0x1c  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetClocksFreq        0x800'04b9   0xb0  Code  Gb  stm32f10x_rcc.o [1]
+RData                   0x2000'0014   0x20  Data  Gb  main.o [1]
+Region$$Table$$Base      0x800'0774          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0784          --   Gb  - Linker created -
+USARTInit                0x800'0289   0x3a  Code  Gb  main.o [1]
+USART_Cmd                0x800'0471   0x1c  Code  Gb  stm32f10x_usart.o [1]
+USART_GetFlagStatus      0x800'049d   0x1a  Code  Gb  stm32f10x_usart.o [1]
+USART_Init               0x800'03ad   0xbc  Code  Gb  stm32f10x_usart.o [1]
+USART_ReceiveData        0x800'0495    0x8  Code  Gb  stm32f10x_usart.o [1]
+USART_SendData           0x800'048d    0x8  Code  Gb  stm32f10x_usart.o [1]
+__cmain                  0x800'0785         Code  Gb  cmain.o [3]
+__exit                   0x800'07b9   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'074d   0x28  Code  Gb  data_init.o [3]
+__iar_packbits_init_single3
+                         0x800'06bd   0x38  Code  Gb  packbits_init_single.o [3]
+__iar_program_start      0x800'0821         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'07a3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  vector_table_M.o [3]
+_call_main               0x800'0791         Code  Gb  cmain.o [3]
+_exit                    0x800'07ad         Code  Gb  cexit.o [3]
+_main                    0x800'079f         Code  Gb  cmain.o [3]
+exit                     0x800'07a7    0x4  Code  Gb  exit.o [2]
+f                       0x2000'0034    0x1  Data  Gb  main.o [1]
+main                     0x800'0041  0x1c6  Code  Gb  main.o [1]
+resAT                   0x2000'0035    0x1  Data  Gb  main.o [1]
+resCLOSE                0x2000'003c    0x1  Data  Gb  main.o [1]
+resECHO                 0x2000'0036    0x1  Data  Gb  main.o [1]
+resMODE                 0x2000'0037    0x1  Data  Gb  main.o [1]
+resMUX                  0x2000'0039    0x1  Data  Gb  main.o [1]
+resPWD                  0x2000'0038    0x1  Data  Gb  main.o [1]
+resSEND                 0x2000'003b    0x1  Data  Gb  main.o [1]
+resSERVER               0x2000'003a    0x1  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\testHome\Documents\ARMProgrammingNew\an3268\stm32vldiscovery_package\Project\Examples\USART\EWARMv5\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1 844 bytes of readonly  code memory
+    285 bytes of readonly  data memory
+  1 085 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
